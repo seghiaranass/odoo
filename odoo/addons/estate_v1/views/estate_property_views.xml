@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    // this the list (table) of fields (information) ex: Name,description......
+    <record id="estate_property_view_tree" model="ir.ui.view">
+        <field name="name">estate_property.tree</field>
+        <field name="model">estate_property_v1</field>
+        <field name="arch" type="xml">
+            <tree string="Estate">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    // this action if for menu, you need this action id in estate_menus.xml 
+    <record id="estate_property_action" model="ir.actions.act_window">
+        <field name="name">Estate property</field>
+        <field name="res_model">estate_property_v1</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
